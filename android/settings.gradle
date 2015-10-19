@@ -1,0 +1,3 @@
+rootProject.name = 'sunsurfers2'
+
+include ':app'
