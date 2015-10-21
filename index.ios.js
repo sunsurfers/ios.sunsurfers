@@ -23,7 +23,7 @@ const colors = {
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'pink'
+    backgroundColor: '#FFBE00'
   }
 });
 //<Text style={styles.headerTitle}>MAP.SUNSURFERS</Text>
@@ -35,7 +35,7 @@ var sunsurfers2 = React.createClass({
          <Router
             firstRoute={{
                 name: 'noname',
-                component: require('./screen/hello')
+                component: require('./app/hello')
               }}
             hideNavigationBar
          />

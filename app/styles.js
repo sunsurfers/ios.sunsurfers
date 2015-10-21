@@ -31,11 +31,11 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 64,
-    backgroundColor: '#FFBE00'
+    backgroundColor: colors.yellow,
   },
   headerSegment: {
-    marginLeft: 30,
-    marginRight: 30,
+    marginLeft: 85,
+    marginRight: 85,
     marginTop: 30,
     color: 'white'
   },
@@ -58,6 +58,23 @@ const styles = StyleSheet.create({
     padding: 5,
     backgroundColor: 'blue',
   },
+  searchInput: {
+    height: 30,
+    fontSize: 20,
+    borderColor: 'lightgray',
+    color: 'rgba(0, 0, 0, .7)',
+    borderWidth: 1,
+    margin: 15,
+    padding: 4,
+    paddingLeft: 10,
+    borderRadius: 6,
+    textAlign: 'left',
+  },
+  listItem: {
+    flexDirection: 'row',
+    padding: 3,
+    paddingLeft: 15
+  }
 });
 
 module.exports = styles

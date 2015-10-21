@@ -371,6 +371,11 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				13B07FAE1A68108700A75B9A /* sunsurfers2 */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* sunsurfers2Tests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				0E82512A1BCA849800064A5C /* Fonts */,
 				0E8251631BCA8BC000064A5C /* libz.dylib */,
 				0E8251611BCA8BB700064A5C /* libsqlite3.dylib */,
 				0E82515F1BCA8BAE00064A5C /* libc++.dylib */,
@@ -382,11 +387,6 @@
 				0E8251531BCA8B7C00064A5C /* CoreTelephony.framework */,
 				0E8251511BCA8B5000064A5C /* Settings.bundle */,
 				0E82514F1BCA8B4300064A5C /* Mapbox.bundle */,
-				0E82512A1BCA849800064A5C /* Fonts */,
-				13B07FAE1A68108700A75B9A /* sunsurfers2 */,
-				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* sunsurfers2Tests */,
-				83CBBA001A601CBA00E9B192 /* Products */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
