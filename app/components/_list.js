@@ -46,14 +46,16 @@ class List extends React.Component {
 
   renderRow(s) {
     return (<TouchableHighlight onPress={this.onPress.bind(this, s.id)} underlayColor="#E2E2E2">
-         <View style={styles.listItem} key={s.id} on>
+         <View style={styles.listItem} key={s.id}>
            <View style={{flex: 1}}>
              <Image source={{uri: 'http://rogozhnikoff.com/sunsurfers/' + s.id + '-pin.png'}} style={styles.avatar}/>
            </View>
            <View style={[{flex: 5, flexDirection: 'row'}]}>
              <Icon name={s.sex} color="black" style={{marginRight: 5, marginTop: 14}}/>
-             <Text key={s.name} style={[{lineHeight: 28}]}><Text style={styles.bold}>{s.name}</Text> - {s.age}
-               годков</Text>
+             <Text key={s.name} style={[{lineHeight: 28}]}>
+               <Text style={[styles.bold, {fontStyle: 'italic'}]}>{s.name}</Text>
+               - {s.age} лет
+             </Text>
            </View>
          </View>
        </TouchableHighlight>
