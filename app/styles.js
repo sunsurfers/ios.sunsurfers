@@ -1,9 +1,13 @@
-const {StyleSheet} = require('react-native');
+"use strict";
 
+
+const {StyleSheet} = require('react-native');
 
 const colors = {
   yellow: '#FFBE00'
 };
+
+
 const styles = StyleSheet.create({
   bold: {
     fontWeight: 'bold'

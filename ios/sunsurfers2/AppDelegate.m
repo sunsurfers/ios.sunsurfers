@@ -31,6 +31,10 @@
    * on the same Wi-Fi network.
    */
 
+  // coworking
+//  jsCodeLocation = [NSURL URLWithString:@"http://192.168.88.142:8081/index.ios.bundle?platform=ios&dev=true"];
+  
+  // for local builds
   jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
 
   /**

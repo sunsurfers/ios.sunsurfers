@@ -30,8 +30,10 @@ class Map extends React.Component {
 
     setTimeout(function () {
       AsyncStorage.getItem('mapPosition').then(function (mapPosition) {
-        console.log('get mapPosition', JSON.parse(mapPosition))
-        this.setState({position: JSON.parse(mapPosition)})
+        //console.log('get mapPosition', JSON.parse(mapPosition))
+        this.setState({
+          position: JSON.parse(mapPosition) || {latitude: 0, longitude: 0, zoom: 0}
+        })
       }.bind(this))
     }.bind(this), 222);
 
@@ -74,11 +76,11 @@ class Map extends React.Component {
           "width": 25
         }
       }])
-    }.bind(this), 2222)
+    }.bind(this), 3333)
   }
 
   onRegionChange (position) {
-    console.log('onRegionChange', position, JSON.stringify(position))
+    //console.log('onRegionChange', position, JSON.stringify(position))
     AsyncStorage.setItem('mapPosition', JSON.stringify(position))
 
     //this.setState({
@@ -99,7 +101,7 @@ class Map extends React.Component {
 
     //const centerCoordinate = position ? {latitude: position.latitude, longitude: position.longitude} : null;
 
-    console.log('render position', position)
+    //console.log('render position', position)
 
 
 
