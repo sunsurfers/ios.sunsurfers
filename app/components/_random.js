@@ -2,6 +2,9 @@ const React = require('react-native');
 const { PropTypes, View, Text, AsyncStorage } = React;
 const Button = require('react-native-button');
 
+
+const cons = console.log.bind(console, 'random')
+
 class Random extends React.Component {
   constructor() {
     super();
@@ -11,13 +14,13 @@ class Random extends React.Component {
     }
 
     AsyncStorage.getItem('randoms').then(function (randoms) {
-      console.log('randoms', randoms)
+      cons('getItem', randoms)
       this.setState({randoms: JSON.parse(randoms)})
     }.bind(this))
   }
 
   onPress () {
-    console.log('onPress')
+    console.log('onPress');
 
     fetch('https://qrng.anu.edu.au/API/jsonI.php?length=10&type=uint8')
        .then((response) => response.text())
@@ -25,16 +28,17 @@ class Random extends React.Component {
          const randoms = JSON.parse(results).data;
          this.setState({randoms: randoms});
          AsyncStorage.setItem('randoms', JSON.stringify(randoms));
-       }.bind(this)).catch(console.log.bind(console, 'fetch random'))
+       }.bind(this)).catch(cons.bind(cons, 'fetch'))
   }
 
   render() {
     const {} = this.props;
 
     const {randoms} = this.state
+    console.log('randoms', randoms)
 
     const randomsHtml = randoms ? randoms.map(function (n, i) {
-      return (<Text key={i}>{n}</Text>)
+      return (<Text key={i} style={{fontWeight: 'bold', textAlign: 'center'}}>{n}</Text>)
     }) : null;
 
     return (<View>

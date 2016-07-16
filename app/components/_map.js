@@ -35,7 +35,7 @@ class Map extends React.Component {
           position: JSON.parse(mapPosition) || {latitude: 0, longitude: 0, zoom: 0}
         })
       }.bind(this))
-    }.bind(this), 222);
+    }.bind(this), 1000);
 
     //setTimeout(function () {
     //  this.setState({
@@ -95,7 +95,7 @@ class Map extends React.Component {
 
     if(!position) {
       return (<View style={{flex: 1}}>
-         <Text style={{lineHeight: 100, textAlign: 'center'}}>Ща, подождь...</Text>
+         <Text style={{lineHeight: 100, textAlign: 'center', color: 'red'}}>Ща, подождь...</Text>
       </View>)
     }
 
